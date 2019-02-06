@@ -104,6 +104,12 @@ export class Paginator extends React.Component<PaginatorProps, PaginatorState>{
         }
     }
 
+    setIndex = (index)=>{
+        this.setState({
+            currentPageIdx:index
+        })
+    }
+
     goToStart = ()=>{
         this.setState({
             currentPageIdx:0

@@ -19,6 +19,11 @@ var Paginator = (function (_super) {
     __extends(Paginator, _super);
     function Paginator(p) {
         var _this = _super.call(this, p) || this;
+        _this.setIndex = function (index) {
+            _this.setState({
+                currentPageIdx: index
+            });
+        };
         _this.goToStart = function () {
             _this.setState({
                 currentPageIdx: 0

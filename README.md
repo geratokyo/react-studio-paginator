@@ -30,6 +30,11 @@ pageStatusComponent?|(currentPage:number, totalPages:number) =>React.ReactNode|T
 |nextButton|```<button>Next</button>```| 
 |pageStatusComponent|```(e,i)=> `${e} of ${i}`}```| 
 
+## Installation 
+
+```
+$ npm install --save react-studio-paginator
+```
 
 ## Usage
 

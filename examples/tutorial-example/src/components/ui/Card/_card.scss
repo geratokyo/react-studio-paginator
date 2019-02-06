@@ -1,0 +1,61 @@
+/*************************/
+/////// GENERAL VARS //////
+/*************************/
+
+//TODO vars
+
+/*************************/
+/////// CUSTOM VARS ///////
+/*************************/
+
+//TODO vars
+
+/*************************/
+///// TYPOGRAPHY VARS /////
+/*************************/
+
+//TODO vars
+
+/*************************/
+///// COMPONENT CODE //////
+/*************************/
+.card {
+    height: 70px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+    &__image {
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 80px;
+    }
+
+    &__title {
+        padding: 1rem;
+        h1 {
+            margin: 0px;
+            line-height: 100%;
+        }
+    }
+}
+
+@include SmallDevice {
+    .card {
+    }
+}
+
+@include MediumDevice {
+    .card {
+    }
+}
+
+/*************************/
+/////// CUSTOM CODE ///////
+/*************************/
+//TODO code

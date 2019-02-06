@@ -20,6 +20,7 @@ export declare class Paginator extends React.Component<PaginatorProps, Paginator
     static defaultProps: Partial<PaginatorProps>;
     componentDidMount(): void;
     componentDidUpdate(prevProps: PaginatorProps, prevState: PaginatorState): void;
+    setIndex: (index: any) => void;
     goToStart: () => void;
     goToEnd: () => void;
     calculatePages: () => void;
