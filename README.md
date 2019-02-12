@@ -54,3 +54,6 @@ import {Paginator} from "react-studio-paginator";
     }}
 />
 ```
+
+## Other Links
+More details on how to use this component can be found in this [article](https://roobley.com/add-a-paginator-to-your-app-with-react-studio-paginator)
