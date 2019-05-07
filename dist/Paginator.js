@@ -83,9 +83,9 @@ var Paginator = (function (_super) {
             this.state.showPaginatorControls &&
                 React.createElement("div", { className: "paginator__controls" },
                     React.createElement("div", { className: "paginator__buttons" },
-                        React.createElement("span", { className: "paginator__btn paginator__btn--prev", onClick: this.showPreviousElements }, props.previousButton),
+                        React.createElement("span", { className: "paginator__btn paginator__btn--prev " + (state.currentPageIdx === 0 ? "paginator__btn--disable" : ""), onClick: this.showPreviousElements }, props.previousButton),
                         React.createElement("span", { className: "paginator__status" }, props.pageStatusComponent(state.currentPageIdx + 1, state.totalPages)),
-                        React.createElement("span", { className: "paginator__btn paginator__btn--next", onClick: this.showNextElements }, props.nextButton)))));
+                        React.createElement("span", { className: "paginator__btn paginator__btn--next " + (state.currentPageIdx === state.totalPages - 1 ? "paginator__btn--disable" : ""), onClick: this.showNextElements }, props.nextButton)))));
     };
     Paginator.defaultProps = {
         className: "",
