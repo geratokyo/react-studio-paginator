@@ -159,7 +159,9 @@ export class Paginator extends React.Component<PaginatorProps, PaginatorState>{
         let props = this.props,
             state = this.state;
         return (
-            <div className={"paginator " + props.className}>
+            <div className={"paginator " + props.className}
+                data-current-index={state.currentPageIdx}
+            >
                 {
                     this.getShownElement()
                 }
@@ -167,7 +169,7 @@ export class Paginator extends React.Component<PaginatorProps, PaginatorState>{
                     this.state.showPaginatorControls &&
                     <div className="paginator__controls">
                         <div className="paginator__buttons">
-                            <span className="paginator__btn paginator__btn--prev"
+                            <span className={"paginator__btn paginator__btn--prev " + (state.currentPageIdx === 0?"paginator__btn--disable":"")}
                                 onClick={this.showPreviousElements}>
                                 {props.previousButton}
                             </span>
@@ -176,7 +178,7 @@ export class Paginator extends React.Component<PaginatorProps, PaginatorState>{
                                     props.pageStatusComponent(state.currentPageIdx + 1, state.totalPages)
                                 }
                             </span>
-                            <span className="paginator__btn paginator__btn--next"
+                            <span className={"paginator__btn paginator__btn--next " + (state.currentPageIdx === state.totalPages - 1?"paginator__btn--disable":"")}
                                 onClick={this.showNextElements}>
 
                                 {props.nextButton}

@@ -78,7 +78,7 @@ var Paginator = (function (_super) {
     };
     Paginator.prototype.render = function () {
         var props = this.props, state = this.state;
-        return (React.createElement("div", { className: "paginator " + props.className },
+        return (React.createElement("div", { className: "paginator " + props.className, "data-current-index": state.currentPageIdx },
             this.getShownElement(),
             this.state.showPaginatorControls &&
                 React.createElement("div", { className: "paginator__controls" },
