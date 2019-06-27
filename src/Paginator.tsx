@@ -99,7 +99,8 @@ export class Paginator extends React.Component<PaginatorProps, PaginatorState>{
     }
 
     componentDidUpdate(prevProps: PaginatorProps, prevState: PaginatorState) {
-        if (prevProps.totalElements !== this.props.totalElements) {
+        if (prevProps.totalElements !== this.props.totalElements || 
+            prevProps.elementsPerView !== this.props.elementsPerView) {
             this.calculatePages();
         }
     }

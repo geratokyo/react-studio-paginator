@@ -72,7 +72,8 @@ var Paginator = (function (_super) {
         this.calculatePages();
     };
     Paginator.prototype.componentDidUpdate = function (prevProps, prevState) {
-        if (prevProps.totalElements !== this.props.totalElements) {
+        if (prevProps.totalElements !== this.props.totalElements ||
+            prevProps.elementsPerView !== this.props.elementsPerView) {
             this.calculatePages();
         }
     };
